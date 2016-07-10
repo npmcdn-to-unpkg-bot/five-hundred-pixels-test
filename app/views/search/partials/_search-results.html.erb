@@ -1,0 +1,13 @@
+<div class="grid" data-behavior="results-grid">
+  <%= render 'search/partials/results-list' %>
+</div>
+
+<% if params.fetch('search_term', nil) %>
+  <div class="more-results row text-center">
+    <%= link_to @more_results_path, remote: true,
+                                    id: 'more-results-link',
+                                    data: {behavior: 'load-more-results'} do %>
+      <button class="btn btn-primary btn-lg">Load More Results</button>
+    <% end %>
+  </div>
+<% end %>

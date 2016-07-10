@@ -1,0 +1,12 @@
+var $container = $('[data-behavior=results-grid]');
+var moreResults = "<%= j (render 'search/partials/results-list') %>";
+var $load_more_results = $('[data-behavior=load-more-results]');
+
+$container.append(moreResults);
+
+$container.imagesLoaded( function() {
+  $('.grid-item').removeClass('hidden');
+  $container.isotope( 'reloadItems' ).isotope();
+  $load_more_results.find('button').text('Load More Results');
+  $load_more_results.attr('href', "<%= @more_results_path %>");
+});

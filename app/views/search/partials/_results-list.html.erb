@@ -1,0 +1,11 @@
+<% if @api_results.fetch('photos') %>
+  <% @api_results.fetch('photos').each do |photo| %>
+    <div class="grid-item hidden">
+      <%= link_to click_search_index_path(@search_term_service.key_to_search_term, photo.fetch('id')) do %>
+        <%= image_tag photo.fetch('image_url') %>
+      <% end %>
+    </div>
+  <% end %>
+<% else %>
+  <h4>No results</h4>
+<% end %>

@@ -1,0 +1,16 @@
+<%= render 'search/partials/header' %>
+
+<div class="container">
+
+  <section class="search-results">
+    <p class="details">
+      Displaying <strong>"<%= @search_term_service.key_to_search_term %>"</strong>
+      Stock Photos and Images (<%= number_with_delimiter(@api_results.fetch('total_items'), delimiter: ',') %>)
+    </p>
+    <%= render 'search/partials/search-results' %>
+  </section>
+
+  <hr/>
+  <%= render 'shared/footer' %>
+
+</div>

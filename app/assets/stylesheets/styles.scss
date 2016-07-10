@@ -1,0 +1,99 @@
+
+//--- Variables
+$grey-text: #a4a6a7;
+$dark-text: #666666;
+$btn-primary-color: #d5314e;
+
+//--- General
+body {
+  color: $dark-text;
+  font-family: 'proximanova-semibold-webfont';
+  .grid-item {
+    padding: 8px;
+  }
+  footer {
+    color: $grey-text;
+    padding-bottom: 25px;
+  }
+  //--- Search form input
+  .input-wrapper {
+    input.search-input {
+      margin-left: auto;
+      margin-right: auto;
+      border: none;
+    }
+    .input-group-btn {
+      button, button:hover, button:focus, button:active {
+        border: 1px solid #fff;
+        background: #fff;
+        padding: 6px 12px;
+      }
+      .glyphicon {
+        color: #cccccc;
+      }
+    }
+  }
+  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: $btn-primary-color!important;
+    border-color: $btn-primary-color!important;
+  }
+  .grid {
+    .grid-item {
+      img {
+        min-width: 256px;
+      }
+    }
+  }
+}
+
+//--- Home page
+section.index-results {
+  padding-top: 10px;
+}
+
+//--- Homepage Header
+header.home {
+  background: image-url('home-header.png') no-repeat;
+  background-size: cover;
+  .logo {
+    img {
+      height: 150px;
+    }
+  }
+  h4.header-text {
+    font-family: 'proximanova-semibold-webfont';
+    color: #fff;
+  }
+  .search-form {
+    padding-bottom: 40px;
+  }
+}
+
+//--- Inner page
+.search-results {
+  p.details {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .more-results {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+//-- Inner Header
+header.inner {
+  nav.navbar {
+    border-radius: 0;
+    background: image-url('home-header.png') no-repeat;
+    background-size: cover;
+    .navbar-header {
+      a.navbar-brand {
+        padding-top: 5px;
+        img {
+          height: 40px;
+        }
+      }
+    }
+  }
+}

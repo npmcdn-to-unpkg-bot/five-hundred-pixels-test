@@ -1,0 +1,33 @@
+<header class="inner">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#inner-navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to root_path, class: 'navbar-brand' do %>
+          <%= image_tag 'eezy-nav-logo.png' %>
+        <% end %>
+      </div>
+
+      <div class="collapse navbar-collapse" id="inner-navbar-collapse">
+        <%= form_for @search_form, url: search_index_path, html: {class: 'navbar-form navbar-left'} do |f| %>
+          <div class="input-group input-wrapper">
+            <%= f.text_field :search_term, class: 'form-control search-input float-left',
+                                             value: @search_term_service.key_to_search_term,
+                                             required: true %>
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+</header>
+

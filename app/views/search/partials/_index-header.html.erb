@@ -1,0 +1,24 @@
+<header class="home">
+  <div class="logo text-center">
+    <%= image_tag 'eezytest-logo.png' %>
+  </div>
+  <h4 class="header-text text-center">Enter your keywords below to see results from the 500px API</h4>
+
+  <div class="search-form text-center">
+    <%= form_for @search_form, url: search_index_path do |f| %>
+      <div class="row">
+        <div class="input-group col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 input-wrapper">
+          <%= f.text_field :search_term, class: 'form-control search-input float-left',
+                                           placeholder: 'Enter keyword(s)',
+                                           required: true %>
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</header>
